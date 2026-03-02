@@ -15,109 +15,111 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         background-color: #000;
         min-height: 100vh;
-        overflow: hidden;
-      }
-
-      .container {
-        position: relative;
-        width: 100vw;
-        height: 100vh;
+        overflow: auto;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .main-image {
-        position: absolute;
-        top: 0;
-        left: 0;
+      .container {
+        position: relative;
+        width: 100%;
+        max-width: 100vw;
+        max-height: 100vh;
+        aspect-ratio: 768 / 1024;
+        margin: auto;
+        font-size: calc(1vw + 1vh);
+      }
+
+      .image-wrapper {
+        position: relative;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        z-index: 1;
+      }
+
+      .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
       }
 
       .google-form-button {
-        position: relative;
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -50%);
         z-index: 2;
         display: inline-block;
-        background: linear-gradient(135deg, #0f5792 0%, #38abee 100%);
-        color: white;
-        padding: 20px 50px;
+        background: transparent;
+        color: rgb(0, 0, 0);
+        padding: 1em 2.5em;
         text-decoration: none;
-        font-size: 1.3em;
+        font-size: 1em;
         font-weight: bold;
-        border-radius: 50px;
-        box-shadow: 0 10px 30px rgba(25, 50, 88, 0.4);
+        border-radius: 2.5em;
+        box-shadow: none;
         transition: all 0.3s ease;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-top: 50vh;
+        letter-spacing: 0.1em;
+        white-space: nowrap;
       }
 
       .google-form-button:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 83, 138, 0.6);
-        background: linear-gradient(135deg, #004b7c 0%, #4db8ff 100%);
+        transform: translate(-50%, -50%) scale(1.1);
       }
 
       .google-form-button:active {
-        transform: translateY(-2px);
+        transform: translate(-50%, -50%) scale(1.05);
       }
 
       @media (max-width: 480px) {
-        .main-image {
-          object-fit: contain;
-        }
-
-        .google-form-button {
-          padding: 12px 25px;
-          font-size: 0.9em;
-          margin-top: 45vh;
-          letter-spacing: 1px;
+        .container {
+          font-size: calc(1.2vw + 1.2vh);
         }
       }
 
       @media (min-width: 481px) and (max-width: 768px) {
-        .main-image {
-          object-fit: contain;
-        }
-
-        .google-form-button {
-          padding: 15px 35px;
-          font-size: 1.1em;
-          margin-top: 48vh;
-        }
-      }
-
-      @media (min-width: 769px) and (max-width: 1024px) {
-        .google-form-button {
-          padding: 18px 45px;
-          font-size: 1.2em;
-          margin-top: 50vh;
+        .container {
+          font-size: calc(1.1vw + 1.1vh);
         }
       }
 
       @media (orientation: landscape) and (max-height: 600px) {
-        .google-form-button {
-          padding: 10px 20px;
-          font-size: 0.9em;
-          margin-top: 20vh;
+        .container {
+          max-height: 95vh;
+          font-size: calc(1.3vw + 1.3vh);
+        }
+      }
+
+      @media (min-aspect-ratio: 768/1024) {
+        .container {
+          width: auto;
+          height: 100vh;
+        }
+      }
+
+      @media (max-aspect-ratio: 768/1024) {
+        .container {
+          width: 100vw;
+          height: auto;
         }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <img src="/images/bdw_main.jpg" alt="BDW BAND LIVE PERFORMANCE" class="main-image" />
+      <div class="image-wrapper">
+        <img src="/images/bdw_main.jpg" alt="BDW BAND LIVE PERFORMANCE" class="main-image" />
 
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdJ1Wcw5jQYN73wMbiGSr0kG9Xg2pwxcPz0HJlKCd-yqc5c3A/viewform?usp=publish-editor"
-        target="_blank"
-        class="google-form-button"
-      >
-        📝 예매하기
-      </a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdJ1Wcw5jQYN73wMbiGSr0kG9Xg2pwxcPz0HJlKCd-yqc5c3A/viewform?usp=publish-editor"
+          target="_blank"
+          class="google-form-button"
+        >
+          📝 예매하기
+        </a>
+      </div>
     </div>
   </body>
 </html>
