@@ -1,124 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>환영합니다</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDW BAND LIVE PERFORMANCE</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .main-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      .google-form-button {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        background: linear-gradient(135deg, #0f5792 0%, #38abee 100%);
+        color: white;
+        padding: 20px 50px;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-weight: bold;
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(25, 50, 88, 0.4);
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 50vh;
+      }
+
+      .google-form-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 83, 138, 0.6);
+        background: linear-gradient(135deg, #004b7c 0%, #4db8ff 100%);
+      }
+
+      .google-form-button:active {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 480px) {
+        .main-image {
+          object-fit: contain;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
+        .google-form-button {
+          padding: 12px 25px;
+          font-size: 0.9em;
+          margin-top: 45vh;
+          letter-spacing: 1px;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 768px) {
+        .main-image {
+          object-fit: contain;
         }
 
-        .container {
-            background: white;
-            padding: 60px 80px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            max-width: 600px;
-            animation: fadeIn 0.8s ease-in;
+        .google-form-button {
+          padding: 15px 35px;
+          font-size: 1.1em;
+          margin-top: 48vh;
         }
+      }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .google-form-button {
+          padding: 18px 45px;
+          font-size: 1.2em;
+          margin-top: 50vh;
         }
+      }
 
-        h1 {
-            font-size: 3em;
-            color: #667eea;
-            margin-bottom: 20px;
-            font-weight: 700;
+      @media (orientation: landscape) and (max-height: 600px) {
+        .google-form-button {
+          padding: 10px 20px;
+          font-size: 0.9em;
+          margin-top: 20vh;
         }
-
-        .emoji {
-            font-size: 4em;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        p {
-            font-size: 1.2em;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .status {
-            display: inline-block;
-            background: #4CAF50;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 600;
-            margin-top: 20px;
-            font-size: 1em;
-        }
-
-        .info {
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #f0f0f0;
-        }
-
-        .info p {
-            font-size: 0.9em;
-            color: #999;
-        }
-
-        .highlight {
-            color: #667eea;
-            font-weight: 600;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <span class="emoji">🚀</span>
-        <h1>환영합니다!</h1>
-        <p>도메인이 성공적으로 연결되었습니다.</p>
-        <p>웹사이트가 정상적으로 작동하고 있습니다.</p>
-        <div class="status">✓ 연결 성공</div>
-        <div class="info">
-            <p>현재 시간: <span class="highlight" id="currentTime"></span></p>
-            <p>도메인 연결 테스트 페이지</p>
-        </div>
+      <img src="/images/bdw_main.jpg" alt="BDW BAND LIVE PERFORMANCE" class="main-image" />
+
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdJ1Wcw5jQYN73wMbiGSr0kG9Xg2pwxcPz0HJlKCd-yqc5c3A/viewform?usp=publish-editor"
+        target="_blank"
+        class="google-form-button"
+      >
+        📝 예매하기
+      </a>
     </div>
-
-    <script>
-        function updateTime() {
-            const now = new Date();
-            const timeString = now.toLocaleString('ko-KR', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit'
-            });
-            document.getElementById('currentTime').textContent = timeString;
-        }
-
-        updateTime();
-        setInterval(updateTime, 1000);
-    </script>
-</body>
+  </body>
 </html>
