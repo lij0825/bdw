@@ -33,6 +33,9 @@
         margin: 40px 0;
         transition: transform 0.3s ease;
         cursor: pointer;
+        max-width: 350px;
+        width: 30%;
+        min-width: 200px;
       }
       .booking-link:hover {
         transform: scale(1.05);
@@ -43,11 +46,14 @@
       @media (max-width: 768px) {
         .booking-link {
           margin: 30px 0;
+          width: 35%;
         }
       }
       @media (max-width: 480px) {
         .booking-link {
           margin: 20px 0;
+          width: 50%;
+          min-width: 180px;
         }
       }
     </style>
@@ -62,7 +68,7 @@
         rel="noopener noreferrer"
         class="booking-link"
       >
-        <img src="images/booking-link.png" alt="예매하기 버튼" class="booking-button" />
+        <img src="images/booking-link-yellow.png" alt="예매하기 버튼" class="booking-button" />
       </a>
 
       <img src="images/lineup-notice.png" alt="상세 라인업 안내" class="lineup-image" />
